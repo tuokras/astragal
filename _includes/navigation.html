@@ -3,9 +3,7 @@
     <span class="nav-items">
         {% for item in site.data.navigation %}
         <div class="nav-item">
-            <a href="{{ item.link }}">
-                {{ item.name }}
-            </a>
+            <a href="{{ item.link }}">{{ item.name }}</a>
             {% if page.url == item.link %}
                 <span class="current">*</span>
             {% endif %}

@@ -1,7 +1,55 @@
 $primary-color: #F0F0F0;
 
+@font-face {
+    font-family: "Aujournuit Densed";
+    src: url("../fonts/Aujournuit-Densed.woff2") format("woff2");
+}
+
+@mixin font-h2 {
+    font-family: "Aujournuit Densed";
+    font-size: 2rem;
+}
+
+@mixin font-body {
+    font-family: "Caudex", serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+@mixin horizontalDots {
+    background-image: linear-gradient(to right, #1a1a1a 10%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+p {
+    @include font-body;
+}
+
+a {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
 }

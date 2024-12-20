@@ -4,7 +4,7 @@
 
     background-color: $primary-color;
     border-bottom: 1px solid #1a1a1a;
-    box-shadow: 5px 5px 5px #1a1a1a0c;
+    box-shadow: 2px 8px 5px -5px rgba(0, 0, 0, 0.05);
 
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -13,7 +13,7 @@
     padding-block: 0.5rem;
     writing-mode: horizontal-tb;
 
-    font-size: 1.5rem;
+    @include font-h2;
 
     .nav-items {
         display: flex;
@@ -21,7 +21,7 @@
 
         .current {
             position: absolute;
-            color: darkred;
+            color: #cc0000;
         }
     }
 }
