@@ -1,0 +1,27 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $primary-color;
+    border-bottom: 1px solid #1a1a1a;
+    box-shadow: 5px 5px 5px #1a1a1a0c;
+
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    margin-inline: inherit;
+    z-index: 2;
+    padding-block: 0.5rem;
+    writing-mode: horizontal-tb;
+
+    font-size: 1.5rem;
+
+    .nav-items {
+        display: flex;
+        gap: 1em;
+
+        .current {
+            position: absolute;
+            color: darkred;
+        }
+    }
+}

@@ -1,5 +1,17 @@
 @import "config";
+@import "work";
+@import "navigation";
+@import "footer";
 
 body {
+    margin-top: 3.5rem;
+    //max-width: 600px;
+    margin-inline: max(1rem, 50% - 600px / 2);
+
     background: $primary-color;
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
 }

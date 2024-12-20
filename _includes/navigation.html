@@ -1,5 +1,15 @@
-<nav class="nav">
+<nav class="nav-container">
     <span class="nav-name">Rasmus Tuokko</span>
-    <a href="/" class="nav-item">Work</a>
-    <a href="/about" class="nav-item">About</a>
+    <span class="nav-items">
+        {% for item in site.data.navigation %}
+        <div class="nav-item">
+            <a href="{{ item.link }}">
+                {{ item.name }}
+            </a>
+            {% if page.url == item.link %}
+                <span class="current">*</span>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </span>
 </nav>
