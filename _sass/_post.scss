@@ -1,0 +1,27 @@
+.post-title {
+    margin-bottom: 0.5rem;
+}
+
+.detail-table {
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    tr {
+        border-block: 1px solid #1a1a1a;
+        writing-mode: horizontal-tb;
+    }
+
+    td {
+        padding-block: 0.4rem;
+        writing-mode: horizontal-tb;
+    }
+
+    .table-key {
+        text-align: left;
+    }
+    
+    .table-value {
+        text-align: right;
+    }
+}

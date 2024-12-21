@@ -5,9 +5,16 @@ $primary-color: #F0F0F0;
     src: url("../fonts/Aujournuit-Densed.woff2") format("woff2");
 }
 
+@mixin font-h1 {
+    font-family: "Aujournuit Densed", serif;
+    font-size: 3.5rem;
+    font-weight: normal;
+}
+
 @mixin font-h2 {
-    font-family: "Aujournuit Densed";
-    font-size: 2rem;
+    font-family: "Aujournuit Densed", serif;
+    font-size: 2.375rem;
+    font-weight: normal;
 }
 
 @mixin font-body {
@@ -30,7 +37,19 @@ $primary-color: #F0F0F0;
     padding: 0;
 }
 
+h1 {
+    @include font-h1;
+}
+
+h2 {
+    @include font-h2;
+}
+
 p {
+    @include font-body;
+}
+
+table {
     @include font-body;
 }
 

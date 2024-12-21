@@ -9,6 +9,14 @@
         grid-template-columns: auto 150px;
         grid-template-areas: "text image";
         gap: 1rem;
+
+        @media (max-width: 500px) {
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr;
+            grid-template-areas: "image"
+                                 "text";
+            gap: 0.5rem;
+        }
     
         .post-text {
             grid-area: text;
