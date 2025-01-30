@@ -1,0 +1,14 @@
+<article class="post-item">
+    <div class="post-text">
+        <div class="post-context">
+            <h3><a href="{{ include.post.url }}" class="post-link">{{ include.post.title }}</a></h3>
+        </div>
+        <div class="post-details">
+            <div class="post-tags text-body">{{ include.post.tags | join: ", " }}</div>
+            <div class="post-date text-body">{{ include.post.date | date: "%m/%Y" }}</div>
+        </div>
+    </div>
+    <a href="{{ include.post.url }}">
+        <img src="{{ include.post.teaser-img.path | absolute_url}}" class="post-image" />
+    </a>
+</article>

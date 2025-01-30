@@ -20,32 +20,36 @@
     display: flex;
     justify-content: space-between;
 
-    background-color: $primary-color;
-    border-bottom: 1px solid #1a1a1a;
-    box-shadow: 2px 8px 5px -5px rgba(0, 0, 0, 0.05);
+    background-color: rgba($primary-color, 0.75);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid $border-color;
+    //box-shadow: 2px 8px 5px -5px rgba(0, 0, 0, 0.05);
 
     position: fixed;
     top: 0; left: 0; right: 0;
-    margin-inline: inherit;
+    @include column-padding;
     z-index: 2;
     padding-block: 0.5rem;
     writing-mode: horizontal-tb;
 
-    @include font-h2;
+    @include font-h3;
+
+    a:hover {
+        font-style: italic;
+    }
+
+    .current {
+        font-style: italic;
+    }
 
     .nav-name {
-        overflow: hidden;
+        overflow: clip;
         white-space: nowrap;
-        text-overflow: ellipsis;
+        padding-right: 0.5rem;
     }
 
     .nav-items {
         display: flex;
-        gap: 1em;
-
-        .current {
-            position: absolute;
-            color: #cc0000;
-        }
+        gap: clamp(1rem, 3vw, 2rem);
     }
 }

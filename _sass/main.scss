@@ -3,15 +3,24 @@
 @import "navigation";
 @import "footer";
 @import "post";
+@import "card";
+@import "blockquote";
+@import "home";
 
 body {
-    margin-top: 4.5rem;
-    margin-inline: max(1rem, 50% - 600px / 2);
+    min-height: 100vh;
+    padding-top: 4.25rem;
+
+    display: flex;
+    flex-direction: column;
 
     background: $primary-color;
 
     .main-container {
         display: flex;
         flex-direction: column;
+
+        @include column-padding;
+        padding-bottom: 1rem;
     }
 }

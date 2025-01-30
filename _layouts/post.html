@@ -2,32 +2,10 @@
 layout: default
 ---
 <h1 class="post-title">{{ page.title }}</h1>
-<p>{{ page.excerpt }}</p>
-<table class="detail-table">
-    {% if page.date %}
-        <tr>
-            <td class="table-key">Date</td>
-            <td class="table-value">{{ page.date | date: "%m/%Y" }}</td>
-        </tr>
-    {% endif %}
-    {% if page.tags %}
-        <tr>
-            <td class="table-key">Tags</td>
-            <td class="table-value">
-                {% for tag in page.tags %}
-                    <span class="post-tag">{{ tag }}</span>{% unless forloop.last %},{% endunless %}
-                {% endfor %}
-            </td>
-        </tr>
-    {% endif %}
-    {% if page.type %}
-        <tr>
-            <td class="table-key">Type</td>
-            <td class="table-value">{{ page.type }}</td>
-        </tr>
-    {% endif %}
-</table>
-{% if page.header-img %}
-    <img src="/assets/images{{ page.permalink }}{{ page.header-img }}" class="header-img">
+{{ content }}
+{% if page.date %}
+    <div class="text-body">Date: {{ page.date | date: "%m/%Y" }}</div>
 {% endif %}
-{{ content | remove_first:page.excerpt }}
+{% if page.tags %}
+    <div class="text-body">Tags: {{ page.tags | join: ", " }}</div>
+{% endif %}

@@ -1,4 +1,14 @@
 .footer {
-    margin-top: 1rem;
-    border-top: 1px solid #1a1a1a;
+    margin-top: auto;
+    //padding-bottom: 1rem;
+    @include column-padding;
+    padding-block: 1rem;
+    writing-mode: horizontal-tb;
+
+    border-top: 1px solid $border-color;
+    
+    .footer-items {
+        display: flex;
+        justify-content: space-between;
+    }
 }

@@ -1,26 +1,133 @@
 ---
 layout: default
+title: Home
+permalink: /
 ---
-<div class="post-container">
-    {% for post in site.posts %}
-    <div class="post-item">
-        <div class="post-text">
-            <div class="post-context">
-                <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
-                <div class="post-excerpt"><p>{{ post.excerpt }}</p></div>
-            </div>
-            <div class="post-details">
-                <p class="post-tags">
-                    {% for tag in post.tags %}
-                        <span class="post-tag">{{ tag }}</span>{% unless forloop.last %},{% endunless %}
-                    {% endfor %}
-                </p>
-                <span class="post-line"></span>
-                <p class="post-date">{{ post.date | date: "%m/%Y" }}</p>
-            </div>
+<h1 class="home-header">Multidisciplinary product design and development</h1>
+
+<p>I bring innovative ideas to life by bridging skills in <b>programming</b>, <b>UI design</b>, <b>3D modeling and visualization</b>. For deeper understanding, please take a look at my projects below or under the <a class="link-underline" href="/work/">work</a> tab.</p>
+
+<figure>
+    <picture>
+        <source srcset="/assets/images/work/sapling/sapling-teaser.avif" media="(max-width:576px)">
+        <img src="/assets/images/work/sapling/sapling-hero.avif">
+    </picture>
+    <figcaption>A render of the <a class="link-underline" href="{% post_url 2020-03-01-sapling-computer %}">Sapling computer case</a> depicts my passion in combining digital and physical aspects in design and development into a well thought out package.</figcaption>
+</figure>
+
+<h2>Reading recommendations</h2>
+<p>The following collections are my recommendations for gaining an impression of my skills and interests.</p>
+
+<div class="home-collection-container">
+    <div class="home-collection">
+        <h2 class="densed">1. How I created the website to suit my requirements</h2>
+        <p>Online portfolio platforms are usually intended for certain fields such as Dribbble is for UI design. Adobe's Behance has more variety in its categories but is limited mostly to visuals. On the other hand, git platforms are best suited for programming projects. Therefore, I needed a new website for my multidisciplinary projects. Read more below.</p>
+        <div class="post-container">
+            {% assign astragal = site.posts | find: "path", "_posts/2025-01-01-astragal.html" %}
+            {% include card.html post=astragal %}
         </div>
-        <img src="{{'/assets/images/porsche-singer-911-preview.png' | absolute_url}}" class="post-image" />
     </div>
-    {% unless forloop.last %}<hr class="post-break" />{% endunless %}
-    {% endfor %}
+    
+    <div class="home-collection">
+        <h2 class="densed">2. Real-time interaction with games and simulators</h2>
+        <p>Programming for real-time interaction requires creativity and a seamless user experience. Both projects below address these challenges by blending physics models with engaging user experiences. A key aspect in both projects leaned towards good working practices such as using git for version management, discussing about the progress in sprint meetings, and producing documentation alongside the program code. Read more below.</p>
+        <div class="post-container">
+            {% assign ballistic-bugs = site.posts | find: "path", "_posts/2024-12-01-ballistic-bugs.html" %}
+            {% include card.html post=ballistic-bugs %}
+            {% assign orbit-simulator = site.posts | find: "path", "_posts/2024-05-01-orbit-simulator.html" %}
+            {% include card.html post=orbit-simulator%}
+        </div>
+    </div>
+    
+    <div class="home-collection">
+        <h2 class="densed">3. User-centric concepts and visualizations of physical products</h2>
+        <p>Product design is the culmination of creativity, technical and substance expertise, and a deep understanding of user needs, coming together to transform ideas into tangible and impactful solutions. Being able to present those ideas is crucial. This applies to digital as well as physical product development. Read more below.</p>
+        <div class="post-container">
+            {% assign fading-time = site.posts | find: "path", "_posts/2022-01-01-fading-time.html" %}
+            {% include card.html post=fading-time %}
+            {% assign lowkey-keyboard = site.posts | find: "path", "_posts/2020-06-01-lowkey-keyboard.html" %}
+            {% include card.html post=lowkey-keyboard %}
+            {% assign sapling-computer = site.posts | find: "path", "_posts/2020-03-01-sapling-computer.html" %}
+            {% include card.html post=sapling-computer %}
+        </div>
+    </div>
 </div>
+
+<h2>Other notable projects</h2>
+<p>Other projects that I have completed include a machine learning project where the goal was to classify good apples from bad apples using two machine learning methods. We ended up comparing logistic regression to a multilayer perceptron.</p>
+
+<p>I have also experience in designing a normalized database for a supermarket home delivery system. The project was later implemented in SQLite.</p>
+
+<p>In a graphics programming course I completed several small assignments such as finishing a simple ray-tracing software.</p>
+
+<p>In addition to the previously listed projects, I have created fun visualizations from the legendary <a class="link-underline" href="{% post_url 2021-02-01-singer-911 %}">Porsche 911 Reimagined by Singer</a>, a <a class="link-underline" href="{% post_url 2020-10-01-armchair %}">concept armchair</a>, and modeling and rendering studies using a <a class="link-underline" href="{% post_url 2022-05-01-o2-wheel %}">Polestar O<sub>2</sub> Wheel</a> as reference.</p>
+
+<h2>Tools and technologies</h2>
+<p>A list of tools and technologies I have used. The tools that I am familiar with are often similar to what the industry uses. Skills can be easily transferred after learning the workflow.</p>
+
+<div class="list-container">
+    <div class="item1">
+        <div class="list-heading">Languages</div>
+        <ul>
+            <li>Scala</li>
+            <li>C++</li>
+            <li>JavaScript</li>
+            <li>HTML, CSS</li>
+            <li>SQL</li>
+            <li>Python w. NumPy</li>
+        </ul>
+    </div>
+
+    <div class="item2">
+        <div class="list-heading">Tools and frameworks</div>
+        <ul>
+            <li>git</li>
+            <li>SFML for C++</li>
+            <li>ScalaFX</li>
+            <li>Jekyll</li>
+            <li>Deno</li>
+            <li>CMake</li>
+        </ul>
+    </div>
+
+    <div class="item3">
+        <div class="list-heading">CAD and visualization</div>
+        <ul>
+            <li>Blender</li>
+            <li>Fusion 360</li>
+            <li>Penpot / Figma</li>
+            <li>KiCad</li>
+        </ul>
+    </div>
+
+    <div class="item4">
+        <div class="list-heading">Physical prototyping</div>
+        <ul>
+            <li>3D printing</li>
+            <li>Soldering</li>
+            <li>Woodworking</li>
+        </ul>
+    </div>
+</div>
+
+<h2>When strong execution leads to great results</h2>
+
+<p>Vision, execution, and gained feedback produce an iterative design process that often leads to great results.
+    Here are some impressions of the quality of my work.</p>
+
+<blockquote>
+    <div class="quote-quote">I enjoyed playing your game a lot and was my favourite game among the games I had to grade.</div>
+    <div class="quote-credit">- Teaching assistant 1</div>
+</blockquote>
+
+<blockquote>
+    <div class="quote-quote">The user interface looks good, is intuitive, easy (and fun!) to use.
+        The quality of the basic functions of the program is great.</div>
+    <div class="quote-credit">- Teaching assistant 2</div>
+</blockquote>
+
+<blockquote>
+    <div class="quote-quote">Really nice class structure, nice usage of advanced constructs and everything well documented.</div>
+    <div class="quote-credit">- Teaching assistant 3</div>
+</blockquote>
+

@@ -1,0 +1,37 @@
+---
+layout: post
+title: "Creating an Angry Birds inspired video game in C++"
+permalink: /work/ballistic-bugs
+tags: [UI/UX Design, Programming]
+teaser-img:
+    path: /assets/images/work/ballistic-bugs/bb-teaser.avif
+    alt: ""
+---
+<p><b>Ballistic Bugs</b> - A programming project done in a group using C++ with SFML and Box2d libraries.</p>
+
+<figure>
+    <img src="/assets/images/work/ballistic-bugs/bb-main-menu.avif">
+    <figcaption>The main menu of the game. The Play-button opens up a level selection menu. The background is separated from the foreground by using a larger pixel size. Pixelated graphics are used throughout the game.</figcaption>
+</figure>
+
+<h2>Game description</h2>
+<p>Ballistic Bugs is a game like Angry Birds. In this game, the allies are represented by various bugs, and the enemies are depicted as spiders, entrenched in fortified structures. The objective is to strategically sling the bugs toward the enemy’s fortress to destroy all of the spiders using as few bugs as possible.</p>
+
+<p>The game emphasizes skillful planning and precision, with higher scores rewarded for efficient gameplay. Failure to eliminate all of the spiders within the given resources will result defeat. This encourages players to strategize their shots. Some bugs also have special abilities that can be used to complete the level more quickly. The special abilities expedite the destruction of stronger materials.</p>
+
+<figure>
+    <img src="/assets/images/work/ballistic-bugs/bb-level-1.avif">
+    <figcaption>The view after loading the first level of the game. The number of bugs is shown in the top-left corner, while the number of enemy spiders is shown in the top-right corner. The current score is shown in the top-center.</figcaption>
+</figure>
+
+<h2>The development process and work distribution</h2>
+<p>The project had a tight schedule. The timeline was divided into four sprints and contained a final demo. Each development cycle lasted for two weeks. We used git for version control. The strategy was to create a new branch based on an issue, and then merge the changes to master. This way we had a working master version at all times and neither the branches nor master would be too many changes away from each other.</p>
+
+<p>I was active in presenting ideas during the first sprint and did a lot of the initial planning and architectural design. When the team decided about roles, I got the role of a GUI programmer since I had the most experience in graphics in our team. Since I was eager to start the project, I created the project base and created the required CMake scripts to install the libraries we wanted to use.</p>
+
+<p>We used SFML for the graphics and Box2d for simulating physics. To get everyone familiar with the libraries, I created an example scene using the libraries after reading their documentation. I feel like this really helped in establishing common ground for the project. Alongside the GUI programming and art direction, I built a large part of the architecture and refactored the codebase when the structure began to feel cluttered.</p>
+
+<figure>
+    <img src="/assets/images/work/ballistic-bugs/bb-level-end.avif">
+    <figcaption>After completing the level, a score overlay is shown. The stars are calculated based on the score. The player has the possibility to save the current score in a leaderboard.</figcaption>
+</figure>

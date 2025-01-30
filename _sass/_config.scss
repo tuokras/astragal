@@ -1,34 +1,57 @@
 $primary-color: #F0F0F0;
+$border-color: #4C4C4C;
 
 @font-face {
-    font-family: "Aujournuit Densed";
-    src: url("../fonts/Aujournuit-Densed.woff2") format("woff2");
+    font-family: "Aujournuit Variable";
+    src: url("../fonts/Aujournuit-VariableVF.woff2") format("woff2");
 }
 
+/* @font-face {
+    font-family: "Glyseric";
+    src: url("../fonts/Glyseric.woff2") format("woff2");
+    font-style: normal;
+    font-weight: normal;
+} */
+
 @mixin font-h1 {
-    font-family: "Aujournuit Densed", serif;
+    font-family: "Aujournuit Variable", serif;
     font-size: 3rem;
     font-weight: normal;
+    font-variation-settings: "wdth" 4.5;
+    //line-height: 1.2;
 }
 
 @mixin font-h2 {
-    font-family: "Aujournuit Densed", serif;
+    font-family: "Aujournuit Variable", serif;
+    font-size: 2.5rem;
+    font-variation-settings: "wdth" 4.5;
+    font-weight: normal;
+}
+
+@mixin font-h2-densed {
+    font-family: "Aujournuit Variable", serif;
+    font-size: 2.5rem;
+    font-variation-settings: "wdth" 3;
+    font-weight: normal;
+}
+
+@mixin font-h3 {
+    font-family: "Aujournuit Variable", serif;
     font-size: 2rem;
+    font-variation-settings: "wdth" 3;
     font-weight: normal;
 }
 
 @mixin font-body {
     font-family: "Caudex", serif;
     font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.2;
+    font-size: 1.063rem;
+    text-align: justify;
+    //line-height: 1.2;
 }
 
-@mixin horizontalDots {
-    background-image: linear-gradient(to right, #1a1a1a 10%, rgba(255, 255, 255, 0) 0%);
-    background-position: bottom;
-    background-size: 10px 1px;
-    background-repeat: repeat-x;
+@mixin column-padding {
+    padding-inline: max(1rem, 50% - 800px / 2);
 }
 
 * {
@@ -39,18 +62,39 @@ $primary-color: #F0F0F0;
 
 h1 {
     @include font-h1;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
     @include font-h2;
+    margin-bottom: 0.5rem;
+}
+
+h2.densed {
+    @include font-h2-densed;
+}
+
+h3 {
+    @include font-h3;
+    margin-top: -0.25rem;
 }
 
 p {
     @include font-body;
+    margin-bottom: 1rem;
 }
 
-table {
+.text-body {
     @include font-body;
+}
+
+figure {
+    margin-bottom: 2rem;
+}
+
+figcaption {
+    @include font-body;
+    font-style: italic;
 }
 
 a {
@@ -72,3 +116,24 @@ a:hover {
 a:active {
     text-decoration: none;
 }
+
+.link-underline {
+    text-decoration: underline !important;
+    text-underline-offset: 2px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: "– ";
+}
+
+li {
+    @include font-body;
+}
+

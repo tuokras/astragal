@@ -1,0 +1,14 @@
+---
+layout: default
+title: Work
+permalink: /work/
+---
+<div class="work-context">
+    <h1 class="work-header">Selected Work</h1>
+    <p class="work-ingress">A collection of personal projects and school work ordered by completion date.</p>
+</div>
+<div class="post-container">
+    {% for post in site.posts %}
+        {% include card.html post=post %}
+    {% endfor %}
+</div>

@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Visualizing a reimagined version of a legendary sportscar"
+permalink: /work/singer-911
+tags: [Modeling, Rendering]
+teaser-img:
+    path: /assets/images/work/singer-911/singer-teaser.avif
+    alt: ""
+---
+<p><b>Porsche Singer 911</b> - "What if the DNA of the iconic Porsche 911 was Reimagined for the twenty-first century?" Singer Automotive did just that. Inspired by their work, I created renders of my own.</p>
+
+<figure>
+    <img src="/assets/images/work/singer-911/singer-back-left.avif">
+</figure>
+
+<h2>The process</h2>
+<p>I was a fan of the legendary Porsche 911 and wanted to create realistic renders of a car. I was able to download a model from Szymon Kubicki that fit my use case perfectly. Car models are extremely time-consuming and difficult to get right especially when working with limited reference images and a polygon-based modeling software and I was happy that I found a high-quality model to get started with.</p>
+
+<p>I still wanted to create the model more detailed and ended up reworking the whole interior and parts of the exterior. Much of realism is based on shaders, so I recreated the shaders by downloading new PBR textures and by tweaking, then comparing the shaders to reference images. Surface imperfections were modeled for conveying the feeling that someone has driven the car. The shader lookdev requires realistic lighting for physically accurate results. A solution to this was to use HDRI images for the lighting. This way the reflections are included in the development process.</p>
+
+<h2>Challenges and reconsiderations</h2>
+<p>The main challenge was deciding the environment the car would be pictured in. I wanted to create something big with multiple shooting locations and directions and thought about a hilly road. After research I picked a Californian landscape as the location. I went quite far with the plan, downloaded accurate lidar data from public sources and textured the scene with assets. A big problem in open landscape scenes is the vast openness, which however does not come for free when the scene has to be created. A new scene would need to be designed for every shot, including texturing and laying out the assets.</p>
+
+<p>I decided to reconsider the scope of the project after facing challenges in getting even one acceptable-looking render. In addition to looks, the performance of the scene was abysmal from the huge polygon and asset count combined with large textures. I looked into a single scene that could support many viewing angles and would contain enough occlusion to reduce the viewing distance. After further reconsideration, a studio setup felt like a good choice.</p>
+
+<p>Studio setups include another challenge that could in previous scenes be solved with aforementioned HDRIs: reflections. Since the scene is lit using artificial lights, it is important to make the transitions from background to light as seamless as possible. This was achieved by careful light positioning and adjusting the render passes.</p>
+
+<p>The ground uses a displacement map with subdivided geometry. The method produces accurate surface detail but requires a large amount of memory to render. I ended up rendering the ground and the car separately to reduce the memory usage. I would then combine the layers to produce the final images.</p>
+
+<figure>
+    <img src="/assets/images/work/singer-911/singer-front-right.avif">
+</figure>
+
+<figure>
+    <img src="/assets/images/work/singer-911/singer-side.avif">
+</figure>
+
+<figure>
+    <img src="/assets/images/work/singer-911/singer-interior.avif">
+</figure>
+
+<figure>
+    <img src="/assets/images/work/singer-911/singer-back.avif">
+</figure>

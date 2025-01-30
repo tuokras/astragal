@@ -1,0 +1,28 @@
+blockquote {
+    margin-block: 1.5rem;
+    margin-left: 0.5rem;
+    color: #2C2C2C;
+    @include font-body;
+    
+    .quote-quote {
+        quotes: "“" "”" "‘" "’";
+        text-align: justify;
+        text-align-last: center;
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+        text-indent: -0.5rem;
+
+        &::before {
+            content: open-quote;
+        }
+
+        &::after {
+            content: close-quote;
+        }
+    }
+
+    .quote-credit {
+        text-align: right;
+        font-style: italic;
+    }
+}
