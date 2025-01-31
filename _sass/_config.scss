@@ -6,19 +6,11 @@ $border-color: #4C4C4C;
     src: url("../fonts/Aujournuit-VariableVF.woff2") format("woff2");
 }
 
-/* @font-face {
-    font-family: "Glyseric";
-    src: url("../fonts/Glyseric.woff2") format("woff2");
-    font-style: normal;
-    font-weight: normal;
-} */
-
 @mixin font-h1 {
     font-family: "Aujournuit Variable", serif;
     font-size: 3rem;
     font-weight: normal;
     font-variation-settings: "wdth" 4.5;
-    //line-height: 1.2;
 }
 
 @mixin font-h2 {
@@ -47,7 +39,6 @@ $border-color: #4C4C4C;
     font-weight: 400;
     font-size: 1.063rem;
     text-align: justify;
-    //line-height: 1.2;
 }
 
 @mixin column-padding {
