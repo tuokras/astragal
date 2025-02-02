@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="{{'/assets/images/favicon.ico' | absolute_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caudex:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{'/assets/css/styles.css' | absolute_url}}">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | absolute_url }}">
   </head>
   <body>
     {% include navigation.html %}
